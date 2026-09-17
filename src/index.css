@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1e1e2e;
+  color: #e2e8f0;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3d4e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4d5e;
+}
+
+/* Editor textarea */
+textarea {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  tab-size: 2;
+}
+
+/* Wiki link styles */
+.wiki-link {
+  color: #a78bfa;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.3);
+  transition: all 0.2s;
+}
+
+.wiki-link:hover {
+  color: #c4b5fd;
+  border-bottom-color: rgba(196, 181, 253, 0.5);
+}
+
+/* Markdown preview styles */
+.markdown-preview {
+  line-height: 1.7;
+}
+
+.markdown-preview h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #2a2d3e;
+}
+
+.markdown-preview h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-preview h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-preview p {
+  margin-bottom: 0.75rem;
+  color: #d1d5db;
+}
+
+.markdown-preview a {
+  color: #818cf8;
+  text-decoration: underline;
+}
+
+.markdown-preview a:hover {
+  color: #a5b4fc;
+}
+
+.markdown-preview code {
+  background: #2a2d3e;
+  color: #c4b5fd;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.markdown-preview pre {
+  background: #0d0d1a;
+  border: 1px solid #2a2d3e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-preview pre code {
+  background: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+
+.markdown-preview blockquote {
+  border-left: 4px solid #a78bfa;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-preview li {
+  margin-bottom: 0.25rem;
+  color: #d1d5db;
+}
+
+.markdown-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid #2a2d3e;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.markdown-preview th {
+  background: #2a2d3e;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.markdown-preview td {
+  color: #d1d5db;
+}
+
+.markdown-preview hr {
+  border: none;
+  border-top: 1px solid #2a2d3e;
+  margin: 1.5rem 0;
+}
+
+.markdown-preview img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Task list checkboxes */
+.markdown-preview input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #a78bfa;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(167, 139, 250, 0.3);
+}
